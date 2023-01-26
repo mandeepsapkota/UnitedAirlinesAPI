@@ -7,6 +7,8 @@ namespace UnitedAirlinesAPI.Infrastructure
     {
         public static IServiceCollection AddServices(this IServiceCollection services, IConfiguration configuration)
         {
+            //Use IHttpClientFactory directly
+            services.AddHttpClient();
 
             // Add swagger
             services.AddSwaggerGen(options =>

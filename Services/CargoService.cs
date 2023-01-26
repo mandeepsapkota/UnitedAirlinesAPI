@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using System.Net.Http.Headers;
 using UnitedAirlinesAPI.Infrastructure;
 using UnitedAirlinesAPI.Models;
 
@@ -9,10 +8,12 @@ namespace UnitedAirlinesAPI.Services
     public class CargoService : ICargoService
     {
         private readonly SettingConfig _settingConfig;
+        private readonly IHttpClientFactory _httpClientFactory;
 
-        public CargoService(IOptions<SettingConfig> settingConfig)
+        public CargoService(IOptions<SettingConfig> settingConfig, IHttpClientFactory httpClientFactory )
         {
             _settingConfig = settingConfig.Value;
+            _httpClientFactory = httpClientFactory;
         }
 
         public async Task<CargoResponse> GetCargoManifestByAirportCodeFlightAndDate(CargoRequest request)
@@ -30,11 +31,10 @@ namespace UnitedAirlinesAPI.Services
             {
                 HttpResponseMessage response;
 
-                var _uri = new Uri(url);
-                var _method = new HttpMethod("GET");
-                var _httpClient = new HttpClient();
-                _httpClient.DefaultRequestHeaders.Add("x-api-key", apiKey);
-                response = await _httpClient.GetAsync(_uri);
+                var client = _httpClientFactory.CreateClient();
+                client.BaseAddress = new Uri(url);
+                client.DefaultRequestHeaders.Add("x-api-key", apiKey);
+                response = await client.GetAsync(url);
 
                 result = await response.Content.ReadAsStringAsync();
                 response.EnsureSuccessStatusCode();

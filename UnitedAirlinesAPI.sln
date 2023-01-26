@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitedAirlinesAPI", "UnitedAirlinesAPI.csproj", "{84844134-E93F-4EBF-9CFC-4A8F72F10FA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitedAirlinesAPI", "UnitedAirlinesAPI.csproj", "{84844134-E93F-4EBF-9CFC-4A8F72F10FA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitedAirlinesAPI.UnitTests", "..\UnitedAirlinesAPI.UnitTests\UnitedAirlinesAPI.UnitTests.csproj", "{06DA8E06-DD08-4717-BE78-CE24D210033A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitedAirlinesAPI.UnitTests", "..\UnitedAirlinesAPI.UnitTests\UnitedAirlinesAPI.UnitTests.csproj", "{97C0E5B9-8057-4D33-816D-151F6396D94C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{84844134-E93F-4EBF-9CFC-4A8F72F10FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84844134-E93F-4EBF-9CFC-4A8F72F10FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84844134-E93F-4EBF-9CFC-4A8F72F10FA5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06DA8E06-DD08-4717-BE78-CE24D210033A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06DA8E06-DD08-4717-BE78-CE24D210033A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06DA8E06-DD08-4717-BE78-CE24D210033A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06DA8E06-DD08-4717-BE78-CE24D210033A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C0E5B9-8057-4D33-816D-151F6396D94C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C0E5B9-8057-4D33-816D-151F6396D94C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C0E5B9-8057-4D33-816D-151F6396D94C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C0E5B9-8057-4D33-816D-151F6396D94C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
